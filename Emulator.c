@@ -51,13 +51,26 @@ int find_num(char* str) // find number in the string
 {
     int sum = 0;
     int next_c;
-    int i = 9;
-    while (next_c = str[i])
-    {
-        i++;
-        sum = sum * 10 + next_c - '0';
+    if (str[9] == '-') {
+        int i = 10;
+        while (next_c = str[i])
+        {
+            i++;
+            sum = sum * 10 + next_c - '0';
+        }
+        return (-sum);
     }
-    return sum;
+    else
+    {
+        int i = 9;
+        while (next_c = str[i])
+        {
+            i++;
+            sum = sum * 10 + next_c - '0';
+        }
+        return sum;
+    }
+    
 }
 
 void choose_func(char* str, int* pa, int* pb, int* pc, int* pd)
