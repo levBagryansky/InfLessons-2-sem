@@ -20,7 +20,7 @@ int main()
     char str[20];
     printf("Write \"Finish\" to stop.\n");
     do {
-        all_inf(&a, &b, &c, &d);
+        all_inf(&a, &b, &c, &d); // show all information
         gets(str);
         choose_func(str, &a, &b, &c, &d);
     } while (strcmp(str, "Finish") != 0);
