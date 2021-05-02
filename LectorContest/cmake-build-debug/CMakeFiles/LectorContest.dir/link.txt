@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLectorContest.a CMakeFiles/LectorContest.dir/library.c.o
+/usr/bin/ranlib libLectorContest.a
