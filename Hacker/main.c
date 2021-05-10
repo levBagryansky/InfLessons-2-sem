@@ -21,9 +21,9 @@ void hacker_func()
     //printf("difference: %i\n", pfunc2 - pfunc1);
     long long pageAdr = pfunc1;
     //printf("pageAdr %x\n", pageAdr);
-    long long x = 0xfffff000;
-    //pageAdr = pageAdr & x;
-    pageAdr = (pageAdr >> 12) << 12;
+    long long x = 0xfffffffffffff000;
+    pageAdr = pageAdr & x;
+    //pageAdr = (pageAdr >> 12) << 12;
     //printf("PageAddr %x\n", pageAdr);
     if (mprotect((long long*) pageAdr, (int) getpagesize (), PROT_READ | PROT_WRITE | PROT_EXEC)) {
         perror("Couldn’t mprotect");
