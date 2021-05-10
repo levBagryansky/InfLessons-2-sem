@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tardis3/InfLessons-2-sem/Hacker/main.c
+/home/tardis3/InfLessons-2-sem/Contest2/main.c
 stdio.h
--
-errno.h
--
-stdlib.h
--
-sys/mman.h
--
-unistd.h
 -
 
