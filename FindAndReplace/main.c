@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <io.h>
+//#include <io.h>
 #include "stdlib.h"
 #include "string.h"
 #define name_file "ordinaryFile.txt"
@@ -27,7 +27,7 @@ int main() {
     //printf("%c\n", str[partNum]);
 
     printstr(str, len);
-    changeStr(str, &len, "Hello World", "Ahahahahaha", partNum);
+    changeStr(str, &len, "Hello World", "U was hackd", partNum);
     //printstr(str, len);
     printstr(str, len);
     writeToFile("1.txt", str);
@@ -42,7 +42,7 @@ FILE* openFile(char name[], int* lenP)
         exit(1);
     }
     fseek(fp, 0L, SEEK_END);
-    *lenP = ftell(fp) - 3;
+    *lenP = ftell(fp) - 0;
     rewind(fp);
     return fp;
 }

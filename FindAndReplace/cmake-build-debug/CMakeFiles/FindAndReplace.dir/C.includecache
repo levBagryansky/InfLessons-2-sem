@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tardis3/InfLessons-2-sem/FindAndReplace/main.c
+stdio.h
+-
+stdlib.h
+/home/tardis3/InfLessons-2-sem/FindAndReplace/stdlib.h
+string.h
+/home/tardis3/InfLessons-2-sem/FindAndReplace/string.h
+
