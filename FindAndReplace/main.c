@@ -2,7 +2,7 @@
 //#include <io.h>
 #include "stdlib.h"
 #include "string.h"
-#define name_file "ordinaryFile.txt"
+#include "strings.h"
 
 FILE* openFile(char name[], int* lenP);
 char* getString(FILE* fp, int len);
@@ -10,13 +10,14 @@ char* getString1(FILE* fp, int len);
 int findString(char* str, int lenStr, char  part[]);
 void changeStr(char* str, int* lenP, char* prevPart, char* newPart, int n);
 void writeToFile(char* name, char* str);
-
-
 void printstr(char* str, int len);
 
-int main() {
+int main(int argc, char** argv) {
+
     int len = 0;
-    FILE* fp = openFile("1.txt", &len);
+    char* name1 = argv[1];
+    printf("%s\n", argv[1]);
+    FILE* fp = openFile(argv[1], &len);
     //printf("Lenght of string: %i\n", len);
 
     char* str = getString(fp,  len);
@@ -30,7 +31,9 @@ int main() {
     changeStr(str, &len, "Hello World", "U was hackd", partNum);
     //printstr(str, len);
     printstr(str, len);
-    writeToFile("1.txt", str);
+    writeToFile(argv[1], str);
+
+    fclose(fp);
     return 0;
 }
 
@@ -117,9 +120,9 @@ void writeToFile(char* name, char* str)
 
 void printstr(char* str, int len)
 {
-    printf("Str right now:\n");
+    printf("Str right now:\n------------------------------------------\n");
     for (int i = 0; i < len; i++) {
         putchar(str[i]);
     }
-    printf("\n\n");
+    printf("\n-----------------------------------------\n");
 }
