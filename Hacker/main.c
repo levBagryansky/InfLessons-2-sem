@@ -32,13 +32,15 @@ void hacker_func()
     //printf("mprotect worked\n");
     long long change = (pfunc2 - pfunc1 + 2)*16*16 + 0xEB;
     *(int*)(&func1) = change;
+
+
+
 }
 
 int main() {
     func1();
 
     hacker_func();
-
     func1();
 
     return 0;
