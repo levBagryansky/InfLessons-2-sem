@@ -1,0 +1,3 @@
+/home/tardis3/InfLessons-2-sem/Contr/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tardis3/InfLessons-2-sem/Contr/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tardis3/InfLessons-2-sem/Contr/cmake-build-debug/CMakeFiles/Contr.dir
